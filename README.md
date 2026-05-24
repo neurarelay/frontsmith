@@ -87,6 +87,8 @@ The Customer Desk is the ongoing communication lane. It keeps customer requests,
 
 Connection and deployment steps stay approval-gated. Frontsmith prepares the path; it does not connect accounts, publish the site, or send customer messages without explicit owner approval.
 
+The Codex workflow walkthrough proof is available at `docs/walkthroughs/codex-workflow-proof.md`. It shows the Owner Brief, Customer Desk reply draft, estimate preparation, website update/preview, extension planning, connected-action receipt, generated files, preview links, and approval boundaries.
+
 For proposed live actions, Frontsmith can prepare a dry-run connected-action receipt before any adapter runs:
 
 ```bash

@@ -9,6 +9,7 @@ const packageSpec = await readFile("docs/product/package-spec.md", "utf8");
 const architecture = await readFile("docs/product/architecture.md", "utf8");
 const launchScenarios = await readFile("docs/product/launch-scenarios.md", "utf8");
 const extensionGuide = await readFile("docs/developer/extension-guide.md", "utf8");
+const codexWorkflowProof = await readFile("docs/walkthroughs/codex-workflow-proof.md", "utf8");
 
 const requiredCapabilities = [
   "business-setup",
@@ -50,6 +51,7 @@ const requiredFiles = [
   "workflows/prepare-extension-plan.md",
   "workflows/prepare-connected-action.md",
   "docs/product/launch-scenarios.md",
+  "docs/walkthroughs/codex-workflow-proof.md",
   "docs/developer/extension-guide.md",
   "tests/regression.mjs",
   "docs/assets/frontsmith-control-panel.png",
@@ -116,6 +118,7 @@ for (const command of [
 
 assertIncludes(readme, "docs/assets/frontsmith-control-panel.png", "README Control Panel screenshot");
 assertIncludes(readme, "docs/assets/frontsmith-acme-website.png", "README Acme website screenshot");
+assertIncludes(readme, "docs/walkthroughs/codex-workflow-proof.md", "README walkthrough proof");
 
 for (const doc of [
   ["README", readme],
@@ -137,6 +140,17 @@ assertIncludes(extensionGuide, "Extension Planning Workflow", "developer extensi
 assertIncludes(extensionGuide, "Connected-Action Receipt Workflow", "developer connected-action workflow");
 assertIncludes(launchScenarios, "must not send email, publish a website, change DNS, connect providers", "launch gate safety");
 assertIncludes(launchScenarios, "Connected-Action Receipt", "connected-action launch scenario");
+for (const section of [
+  "Owner Brief",
+  "Customer Desk Reply Draft",
+  "Estimate Preparation",
+  "Website Update And Preview",
+  "Extension Planning And Connected-Action Receipt"
+]) {
+  assertIncludes(codexWorkflowProof, section, `walkthrough section ${section}`);
+}
+assertIncludes(codexWorkflowProof, "Generated files", "walkthrough generated files");
+assertIncludes(codexWorkflowProof, "Approval boundary", "walkthrough approval boundary");
 
 console.log("Frontsmith launch-readiness contract passed.");
 
