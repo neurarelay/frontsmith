@@ -28,6 +28,7 @@
     "prepare:reply": "node scripts/prepare-customer-reply.mjs",
     "prepare:estimate": "node scripts/prepare-estimate-draft.mjs",
     "prepare:extension": "node scripts/prepare-extension-plan.mjs",
+    "prepare:connected-action": "node scripts/prepare-connected-action-receipt.mjs",
     "first-run:status": "node scripts/first-run-readiness.mjs",
     "launch:status": "node scripts/launch-status.mjs",
     "build:demo": "node scripts/build-demo.mjs",

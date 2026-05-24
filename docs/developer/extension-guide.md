@@ -47,6 +47,18 @@ The plan is written under `.frontsmith/business/extensions/`. It should define t
 
 The default extension path must not send, publish, schedule, upload, export, or execute provider actions until the owner approves the exact live action.
 
+## Connected-Action Receipt Workflow
+
+Before adding a live email, publishing, file, calendar, or provider adapter, create a local receipt-style record:
+
+```bash
+npm run prepare:connected-action -- --action-type "email" --title "Send consultation follow-up" --target "Customer follow-up" --evidence "Owner-provided customer notes"
+```
+
+The receipt is written under `.frontsmith/business/connected-actions/` as Markdown and JSON. It records the proposed action, approval gate, Neura Registry ref placeholder, Neura Relay Action Card ref placeholder, Decision Receipt state, trace ref, blocked adapters, and safety boundary.
+
+This workflow does not run Neura Relay, connect providers, send messages, publish, schedule, upload, export, or execute external actions. A real connected-mode implementation must replace the placeholder refs only after owner approval and a governed preflight.
+
 ## Local Testing Boundary
 
 Regression tests should not erase `.frontsmith/business/`. Use `FRONTSMITH_BUSINESS_ROOT` when a test needs an isolated local business workspace.

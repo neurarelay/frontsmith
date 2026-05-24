@@ -6,6 +6,28 @@ This document maps the public Frontsmith promise to runnable repo workflows. If 
 
 Frontsmith is acceptable for public GitHub release only when these checks pass:
 
+## Connected-Action Receipt
+
+Scenario: the owner wants to review a proposed live action before any provider adapter runs.
+
+Command:
+
+```bash
+npm run prepare:connected-action -- --action-type "email" --title "Send consultation follow-up" --target "Customer follow-up" --evidence "Owner-provided customer notes"
+```
+
+Expected output:
+
+- local Markdown receipt under `.frontsmith/business/connected-actions/`;
+- local JSON receipt under `.frontsmith/business/connected-actions/`;
+- proposed action ref;
+- Neura Registry and Relay placeholder refs;
+- approval gate;
+- blocked adapters;
+- no live provider action.
+
+Safety: this scenario must not send email, publish a website, change DNS, create calendar events, upload files, export data, configure providers, or execute connected actions.
+
 ```bash
 npm run check
 npm run build:demo

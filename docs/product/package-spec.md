@@ -100,6 +100,14 @@ Frontsmith should be able to prepare an owner-reviewed extension plan for a new 
 
 Extension planning must stay local-only. It must not connect providers, schedule appointments, send messages, publish, upload files, export data, or execute connected actions.
 
+## Connected-Action Receipt Requirement
+
+Frontsmith should be able to prepare a dry-run connected-action receipt before any proposed live email, publishing, file, calendar, or provider action.
+
+The receipt must name the proposed action, target, evidence, approval gate, Neura Registry reference placeholder, Neura Relay Action Card reference placeholder, Decision Receipt state, trace reference, blocked adapters, and generated Markdown/JSON artifacts.
+
+Connected-action receipts must stay local-only. They must not connect providers, schedule appointments, send messages, publish, upload files, export data, or execute connected actions.
+
 ## Default Exclusions
 
 These are excluded from the v1.0 default surface:

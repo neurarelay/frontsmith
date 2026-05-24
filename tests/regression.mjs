@@ -201,6 +201,39 @@ try {
   assertIncludes(extensionPlan, "does not connect providers", "extension plan live-action boundary");
   assertDoesNotInclude(extensionPlan, testRoot, "extension plan temporary root path");
 
+  await run("npm", [
+    "run",
+    "prepare:connected-action",
+    "--",
+    "--action-type",
+    "email",
+    "--title",
+    "Send consultation follow-up",
+    "--target",
+    "Customer follow-up",
+    "--evidence",
+    "Owner-provided customer notes"
+  ]);
+  const connectedActionMarkdownPath = path.join(root, "connected-actions", "email-send-consultation-follow-up-receipt.md");
+  const connectedActionJsonPath = path.join(root, "connected-actions", "email-send-consultation-follow-up-receipt.json");
+  await assertExists(connectedActionMarkdownPath);
+  await assertExists(connectedActionJsonPath);
+  const connectedActionReceipt = await readFile(connectedActionMarkdownPath, "utf8");
+  const connectedActionRecord = JSON.parse(await readFile(connectedActionJsonPath, "utf8"));
+  assertEqual(connectedActionRecord.schema, "frontsmith.connected_action_receipt.v0.1", "connected-action schema");
+  assertEqual(connectedActionRecord.mode, "dry_run", "connected-action mode");
+  assertEqual(connectedActionRecord.adapter_boundary.live_adapter_enabled, false, "connected-action live adapter boundary");
+  assertIncludes(connectedActionReceipt, "Connected-Action Receipt", "connected-action receipt title");
+  assertIncludes(connectedActionReceipt, "Neura References", "connected-action Neura refs");
+  assertIncludes(connectedActionReceipt, "registry-ref-pending", "connected-action registry ref");
+  assertIncludes(connectedActionReceipt, "relay-action-card-pending", "connected-action relay action card ref");
+  assertIncludes(connectedActionReceipt, "pending_until_connected_mode_preflight", "connected-action decision receipt boundary");
+  assertIncludes(connectedActionReceipt, "Blocked adapters", "connected-action blocked adapters");
+  assertIncludes(connectedActionReceipt, ".frontsmith/business/connected-actions/email-send-consultation-follow-up-receipt.md", "connected-action markdown artifact path");
+  assertIncludes(connectedActionReceipt, ".frontsmith/business/connected-actions/email-send-consultation-follow-up-receipt.json", "connected-action json artifact path");
+  assertIncludes(connectedActionReceipt, "does not send email", "connected-action send boundary");
+  assertDoesNotInclude(connectedActionReceipt, testRoot, "connected-action temporary root path");
+
   await run("npm", ["run", "launch:status"]);
   await assertExists(path.join(root, "launch", "launch-status.md"));
 

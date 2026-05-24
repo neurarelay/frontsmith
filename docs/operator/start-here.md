@@ -66,6 +66,7 @@ Use it to see which fields still look like Acme defaults, which business profile
 - Prepare estimate and proposal drafts.
 - Track follow-ups and next customer steps.
 - Prepare extension plans for tools, skills, connectors, and new workflows.
+- Prepare dry-run connected-action receipts before email, publishing, file, calendar, or provider actions.
 - Review launch readiness.
 - Preview the website locally.
 - Run the deployment readiness check.
@@ -179,6 +180,7 @@ Codex can run these tools for you:
 npm run prepare:reply -- --name "Customer Name" --project "Kitchen Remodeling" --notes "Customer notes"
 npm run prepare:estimate -- --project "Kitchen Remodeling" --scope "Scope notes"
 npm run prepare:extension -- --capability "Consultation scheduling" --connector "Google Calendar" --goal "Prepare an owner-reviewed workflow for approved consultation requests."
+npm run prepare:connected-action -- --action-type "email" --title "Send consultation follow-up" --target "Customer follow-up" --evidence "Owner-provided customer notes"
 npm run first-run:status
 npm run owner:brief
 npm run launch:status

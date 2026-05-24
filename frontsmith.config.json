@@ -15,7 +15,8 @@
     "launch-plan",
     "activity-log",
     "settings-integrations",
-    "extension-planning"
+    "extension-planning",
+    "connected-action-receipts"
   ],
   "extensionCandidates": [
     "reviews-proof",

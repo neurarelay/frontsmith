@@ -87,6 +87,14 @@ The Customer Desk is the ongoing communication lane. It keeps customer requests,
 
 Connection and deployment steps stay approval-gated. Frontsmith prepares the path; it does not connect accounts, publish the site, or send customer messages without explicit owner approval.
 
+For proposed live actions, Frontsmith can prepare a dry-run connected-action receipt before any adapter runs:
+
+```bash
+npm run prepare:connected-action -- --action-type "email" --title "Send consultation follow-up" --target "Customer follow-up" --evidence "Owner-provided customer notes"
+```
+
+This writes `.frontsmith/business/connected-actions/...` Markdown and JSON records with the proposed action, approval gate, Neura Registry/Relay reference placeholders, blocked adapters, and no-live-action safety boundary.
+
 Frontsmith already includes the launchable website here:
 
 ```text
@@ -112,6 +120,7 @@ npm run owner:brief
 npm run prepare:reply -- --name "Customer" --project "Kitchen Remodeling" --notes "Customer wants help planning the next step."
 npm run prepare:estimate -- --project "Kitchen Remodeling" --scope "Cabinets, counters, lighting, and layout clarification."
 npm run prepare:extension -- --capability "Consultation scheduling" --connector "Google Calendar" --goal "Prepare an owner-reviewed workflow for approved consultation requests."
+npm run prepare:connected-action -- --action-type "email" --title "Send consultation follow-up" --target "Customer follow-up" --evidence "Owner-provided customer notes"
 npm run first-run:status
 npm run update:website
 npm run launch:status
@@ -164,6 +173,7 @@ Useful daily front-office commands:
 npm run prepare:reply -- --name "Customer" --project "Kitchen Remodeling" --notes "Customer wants help planning the next step."
 npm run prepare:estimate -- --project "Kitchen Remodeling" --scope "Cabinets, counters, lighting, and layout clarification."
 npm run prepare:extension -- --capability "Consultation scheduling" --connector "Google Calendar" --goal "Prepare an owner-reviewed workflow for approved consultation requests."
+npm run prepare:connected-action -- --action-type "calendar" --title "Create consultation hold" --target "Approved consultation request" --evidence "Owner-approved scheduling notes"
 npm run owner:brief
 npm run deploy:check
 npm test

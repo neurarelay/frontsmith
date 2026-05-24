@@ -20,7 +20,8 @@ const requiredCapabilities = [
   "launch-plan",
   "activity-log",
   "settings-integrations",
-  "extension-planning"
+  "extension-planning",
+  "connected-action-receipts"
 ];
 
 const requiredScripts = {
@@ -30,6 +31,7 @@ const requiredScripts = {
   "prepare:reply": "node scripts/prepare-customer-reply.mjs",
   "prepare:estimate": "node scripts/prepare-estimate-draft.mjs",
   "prepare:extension": "node scripts/prepare-extension-plan.mjs",
+  "prepare:connected-action": "node scripts/prepare-connected-action-receipt.mjs",
   "first-run:status": "node scripts/first-run-readiness.mjs",
   "update:website": "node scripts/update-website.mjs",
   "launch:status": "node scripts/launch-status.mjs",
@@ -44,7 +46,9 @@ const requiredScripts = {
 
 const requiredFiles = [
   "scripts/prepare-extension-plan.mjs",
+  "scripts/prepare-connected-action-receipt.mjs",
   "workflows/prepare-extension-plan.md",
+  "workflows/prepare-connected-action.md",
   "docs/product/launch-scenarios.md",
   "docs/developer/extension-guide.md",
   "tests/regression.mjs",
@@ -100,6 +104,7 @@ for (const command of [
   "npm run prepare:reply",
   "npm run prepare:estimate",
   "npm run prepare:extension",
+  "npm run prepare:connected-action",
   "npm run first-run:status",
   "npm run update:website",
   "npm run launch:status",
@@ -126,9 +131,12 @@ for (const doc of [
 assertIncludes(operatorGuide, "Prepare an extension plan", "operator extension prompt");
 assertIncludes(operatorGuide, "first-run-readiness.md", "operator first-run readiness output");
 assertIncludes(packageSpec, "Extension Requirement", "package extension requirement");
+assertIncludes(packageSpec, "Connected-Action Receipt Requirement", "package connected-action receipt requirement");
 assertIncludes(architecture, ".frontsmith/business/extensions/", "architecture extension folder");
 assertIncludes(extensionGuide, "Extension Planning Workflow", "developer extension workflow");
+assertIncludes(extensionGuide, "Connected-Action Receipt Workflow", "developer connected-action workflow");
 assertIncludes(launchScenarios, "must not send email, publish a website, change DNS, connect providers", "launch gate safety");
+assertIncludes(launchScenarios, "Connected-Action Receipt", "connected-action launch scenario");
 
 console.log("Frontsmith launch-readiness contract passed.");
 
