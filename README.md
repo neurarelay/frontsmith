@@ -116,6 +116,14 @@ The root `vercel.json` keeps Vercel in static-site mode and builds the hosted Fr
 
 `npm run deploy:check` is a preflight gate, not a deployment command. It verifies the demo build, included website, Vercel static-site configuration, clean URLs, SEO/social metadata, icons, referenced assets, contact form API wiring, and required production email-delivery environment variables. It exits with blockers until the Resend and contact variables are configured, and it never sends email or deploys the site.
 
+## Launch Gate
+
+Pull requests and pushes to `main` run the GitHub Actions launch gate in `.github/workflows/launch-gate.yml`.
+
+The launch gate installs Node.js 20 dependencies, runs `npm run check`, builds the hosted demo with `npm run build:demo`, and runs `npm test`.
+
+`npm run deploy:check` remains a local/manual preflight because it intentionally verifies production contact-delivery configuration. It should run only when safe placeholder environment variables or the approved business-owned delivery variables are available. The GitHub Actions gate does not deploy, send email, change DNS, call providers, or execute customer-facing actions.
+
 ## Contact Form Delivery
 
 The website contact form posts to:

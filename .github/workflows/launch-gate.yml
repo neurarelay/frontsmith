@@ -1,0 +1,37 @@
+name: Launch Gate
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  launch-gate:
+    name: Frontsmith launch gate
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Check package and content contract
+        run: npm run check
+
+      - name: Build hosted demo
+        run: npm run build:demo
+
+      - name: Run tests
+        run: npm test
