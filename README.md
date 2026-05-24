@@ -73,6 +73,14 @@ Set up Frontsmith for my local service business.
 
 Codex will set up a local business workspace, prepare the Owner Brief, update the included website, and start the ongoing front-office loop: customer reply drafts, follow-up notes, estimate and proposal drafts, launch checks, and approval-gated connection steps for publishing, email, file storage, and scheduling tools.
 
+For a real business replacing the Acme defaults, ask Codex to run:
+
+```bash
+npm run first-run:status
+```
+
+This writes `.frontsmith/business/launch/first-run-readiness.md`, showing which business profile fields are customized, which still look like placeholders, which workspace files exist, and what remains owner-approval-gated before launch.
+
 The Owner Brief is Frontsmith's current-state view for one business. It summarizes what changed, what is waiting, what is blocked, what needs approval, and what the owner should do next.
 
 The Customer Desk is the ongoing communication lane. It keeps customer requests, reply drafts, follow-up notes, estimate next steps, and owner approvals together after the website is launched.
@@ -104,6 +112,7 @@ npm run owner:brief
 npm run prepare:reply -- --name "Customer" --project "Kitchen Remodeling" --notes "Customer wants help planning the next step."
 npm run prepare:estimate -- --project "Kitchen Remodeling" --scope "Cabinets, counters, lighting, and layout clarification."
 npm run prepare:extension -- --capability "Consultation scheduling" --connector "Google Calendar" --goal "Prepare an owner-reviewed workflow for approved consultation requests."
+npm run first-run:status
 npm run update:website
 npm run launch:status
 npm run build:demo

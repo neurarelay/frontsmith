@@ -204,6 +204,17 @@ try {
   await run("npm", ["run", "launch:status"]);
   await assertExists(path.join(root, "launch", "launch-status.md"));
 
+  await run("npm", ["run", "first-run:status"]);
+  const firstRunReadiness = await readFile(path.join(root, "launch", "first-run-readiness.md"), "utf8");
+  assertIncludes(firstRunReadiness, "First-Run Readiness", "first-run readiness title");
+  assertIncludes(firstRunReadiness, "Business Profile Review", "first-run business profile review");
+  assertIncludes(firstRunReadiness, "Needs Owner Input", "first-run owner input section");
+  assertIncludes(firstRunReadiness, "Owner Approval Boundary", "first-run approval boundary");
+  assertIncludes(firstRunReadiness, "Safety Boundary", "first-run safety boundary");
+  assertIncludes(firstRunReadiness, ".frontsmith/business/launch/first-run-readiness.md", "first-run artifact path");
+  assertIncludes(firstRunReadiness, "does not send emails", "first-run send boundary");
+  assertDoesNotInclude(firstRunReadiness, testRoot, "first-run temporary root path");
+
   await run("npm", ["run", "owner:brief"]);
   await assertExists(path.join(root, "activity", "owner-brief.md"));
   const ownerBrief = await readFile(path.join(root, "activity", "owner-brief.md"), "utf8");

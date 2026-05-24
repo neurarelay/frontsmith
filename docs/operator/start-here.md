@@ -40,9 +40,24 @@ Prepare the first customer reply and estimate path if there is an open request.
 
 Codex should create the local business workspace, prepare the Owner Brief, update `website/`, create reviewable Customer Desk and estimate files when needed, and point you to the review files.
 
+Then run the first-run readiness check:
+
+```bash
+npm run first-run:status
+```
+
+The check writes:
+
+```text
+.frontsmith/business/launch/first-run-readiness.md
+```
+
+Use it to see which fields still look like Acme defaults, which business profile fields are customized, which workspace files exist, and which actions still need owner approval before launch.
+
 ## What You Can Do In v1.0
 
 - Set up the business profile.
+- Review first-run readiness for a real business replacing Acme defaults.
 - Review the Owner Brief.
 - Run ongoing customer communication through Customer Desk.
 - Update the included local service business website.
@@ -164,6 +179,7 @@ Codex can run these tools for you:
 npm run prepare:reply -- --name "Customer Name" --project "Kitchen Remodeling" --notes "Customer notes"
 npm run prepare:estimate -- --project "Kitchen Remodeling" --scope "Scope notes"
 npm run prepare:extension -- --capability "Consultation scheduling" --connector "Google Calendar" --goal "Prepare an owner-reviewed workflow for approved consultation requests."
+npm run first-run:status
 npm run owner:brief
 npm run launch:status
 npm run deploy:check

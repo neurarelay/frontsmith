@@ -30,6 +30,7 @@ const requiredScripts = {
   "prepare:reply": "node scripts/prepare-customer-reply.mjs",
   "prepare:estimate": "node scripts/prepare-estimate-draft.mjs",
   "prepare:extension": "node scripts/prepare-extension-plan.mjs",
+  "first-run:status": "node scripts/first-run-readiness.mjs",
   "update:website": "node scripts/update-website.mjs",
   "launch:status": "node scripts/launch-status.mjs",
   "build:demo": "node scripts/build-demo.mjs",
@@ -99,6 +100,7 @@ for (const command of [
   "npm run prepare:reply",
   "npm run prepare:estimate",
   "npm run prepare:extension",
+  "npm run first-run:status",
   "npm run update:website",
   "npm run launch:status",
   "npm run deploy:check",
@@ -122,6 +124,7 @@ for (const doc of [
 }
 
 assertIncludes(operatorGuide, "Prepare an extension plan", "operator extension prompt");
+assertIncludes(operatorGuide, "first-run-readiness.md", "operator first-run readiness output");
 assertIncludes(packageSpec, "Extension Requirement", "package extension requirement");
 assertIncludes(architecture, ".frontsmith/business/extensions/", "architecture extension folder");
 assertIncludes(extensionGuide, "Extension Planning Workflow", "developer extension workflow");
