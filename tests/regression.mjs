@@ -83,6 +83,15 @@ try {
   assertEqual(vercelConfig.framework, null, "Vercel framework");
   assertEqual(vercelConfig.buildCommand, "npm run build:demo", "Vercel build command");
   assertEqual(vercelConfig.functions["api/contact.js"].maxDuration, 10, "contact function duration");
+  assertEqual(vercelConfig.redirects?.[0]?.source, "/:path*", "Vercel default host redirect source");
+  assertEqual(vercelConfig.redirects?.[0]?.has?.[0]?.type, "host", "Vercel default host redirect match type");
+  assertEqual(vercelConfig.redirects?.[0]?.has?.[0]?.value, "frontsmith.vercel.app", "Vercel default host redirect source host");
+  assertEqual(
+    vercelConfig.redirects?.[0]?.destination,
+    "https://frontsmith.neurapath.ai/:path*",
+    "Vercel default host redirect destination"
+  );
+  assertEqual(vercelConfig.redirects?.[0]?.permanent, true, "Vercel default host redirect permanence");
 
   const homepage = await readFile(path.join(websiteRoot, "index.html"), "utf8");
   assertIncludes(homepage, "Acme", "homepage business name");

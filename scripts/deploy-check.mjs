@@ -83,6 +83,15 @@ async function checkVercelConfig() {
   expectEqual(config.cleanUrls, true, "Vercel clean URLs are enabled");
   expectEqual(config.trailingSlash, false, "Vercel trailing slashes are disabled");
   expectEqual(config.functions?.["api/contact.js"]?.maxDuration, 10, "Contact function max duration is set");
+  expectEqual(config.redirects?.[0]?.source, "/:path*", "Default Vercel host redirect covers all paths");
+  expectEqual(config.redirects?.[0]?.has?.[0]?.type, "host", "Default Vercel host redirect uses host match");
+  expectEqual(config.redirects?.[0]?.has?.[0]?.value, "frontsmith.vercel.app", "Default Vercel host redirects only from Vercel host");
+  expectEqual(
+    config.redirects?.[0]?.destination,
+    "https://frontsmith.neurapath.ai/:path*",
+    "Default Vercel host redirects to canonical Frontsmith domain"
+  );
+  expectEqual(config.redirects?.[0]?.permanent, true, "Default Vercel host redirect is permanent");
 
   review.push("Confirm the frontsmith.neurapath.ai Vercel project, production domain, and Git integration before any live deployment");
 }
