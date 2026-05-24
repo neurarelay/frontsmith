@@ -1,0 +1,9 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Frontsmith hosted Control Panel
+    url: https://frontsmith.neurapath.ai/
+    about: Review the hosted evaluator Control Panel and included Acme website.
+  - name: NeuraPath
+    url: https://neurapath.ai/
+    about: Learn about the authority layer behind connected client mode.
+

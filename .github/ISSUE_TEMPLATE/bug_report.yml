@@ -1,0 +1,54 @@
+name: Bug report
+description: Report a setup, workflow, preview, or launch-readiness problem
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a Frontsmith issue. Do not include live credentials, customer data, API keys, or private business records.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the problem clearly.
+      placeholder: I ran npm run owner:brief and...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+      description: Tell us what should have happened.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include the exact command or workflow.
+      placeholder: |
+        1. npm install
+        2. npm run check
+        3. npm run ...
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Relevant output
+      description: Paste terminal output with private data removed.
+      render: shell
+  - type: input
+    id: node
+    attributes:
+      label: Node.js version
+      placeholder: "node -v"
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I removed credentials, customer data, and private business records from this issue
+          required: true
+

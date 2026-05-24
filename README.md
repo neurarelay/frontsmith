@@ -184,3 +184,10 @@ Product and development
 Frontsmith prepares, drafts, previews, and exports by default.
 
 It does not silently send emails, publish websites, change DNS, contact customers, submit provider updates, or execute customer-facing actions. Consequential actions require explicit owner approval. In connected client mode, those actions should pass through Neura Registry and Neura Relay before execution.
+
+## Project Resources
+
+- [Changelog](CHANGELOG.md)
+- [Contributing](CONTRIBUTING.md)
+- [Support](SUPPORT.md)
+- [Security policy](SECURITY.md)

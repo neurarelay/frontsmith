@@ -1,0 +1,47 @@
+name: Product gap
+description: Suggest a focused improvement inside the Frontsmith front-office scope
+title: "[Gap]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Frontsmith v1.0 is intentionally narrow: setup, Owner Brief, Customer Desk, estimates, website updates, launch readiness, extension planning, and owner approval before live action.
+  - type: textarea
+    id: gap
+    attributes:
+      label: What is missing?
+      description: Describe the gap in the current front-office workflow.
+    validations:
+      required: true
+  - type: textarea
+    id: user
+    attributes:
+      label: Who needs this?
+      description: Name the operator or business scenario.
+    validations:
+      required: true
+  - type: textarea
+    id: workflow
+    attributes:
+      label: Expected workflow
+      description: Describe the prompt, command, output, file, or approval state this should create.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Business setup
+        - Owner Brief
+        - Customer Desk
+        - Estimates and proposals
+        - Website
+        - Launch readiness
+        - Extension planning
+        - Documentation
+        - Other
+    validations:
+      required: true
+
