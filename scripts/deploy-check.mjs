@@ -8,7 +8,7 @@ const review = [];
 const demoRoot = "demo";
 const websiteRoot = "website";
 const outputRoot = "dist/frontsmith-demo";
-const requiredDemoFiles = ["index.html", "styles.css", "script.js", "robots.txt", "sitemap.xml"];
+const requiredDemoFiles = ["index.html", "styles.css", "script.js", "robots.txt", "sitemap.xml", "llms.txt"];
 const requiredWebsiteFiles = [
   "index.html",
   "styles.css",
@@ -50,7 +50,7 @@ async function checkWebsiteFiles() {
     }
   }
 
-  for (const file of ["index.html", "styles.css", "script.js", "robots.txt", "sitemap.xml", "frontsmith-mark.svg", "favicon.svg", "favicon.png", "apple-touch-icon.png", "website/index.html", "website/styles.css", "website/script.js"]) {
+  for (const file of ["index.html", "styles.css", "script.js", "robots.txt", "sitemap.xml", "llms.txt", "frontsmith-mark.svg", "favicon.svg", "favicon.png", "apple-touch-icon.png", "website/index.html", "website/styles.css", "website/script.js"]) {
     const fullPath = path.join(outputRoot, file);
     if (await exists(fullPath)) {
       pass(`Demo build asset present: ${fullPath}`);
@@ -136,6 +136,7 @@ async function checkWebsiteMarkup() {
   requireHtml(demoHtml, "<title", "Demo SEO title is present");
   requireHtml(demoHtml, 'name="description"', "Demo SEO description is present");
   requireHtml(demoHtml, 'rel="canonical"', "Demo canonical URL is present");
+  requireHtml(demoHtml, 'href="/llms.txt"', "Demo exposes AI-readable llms.txt discovery");
   requireHtml(demoHtml, 'property="og:title"', "Demo Open Graph title is present");
   requireHtml(demoHtml, 'property="og:image"', "Demo Open Graph image is present");
   requireHtml(demoHtml, 'name="twitter:card"', "Demo Twitter card metadata is present");

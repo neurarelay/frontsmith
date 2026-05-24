@@ -1,0 +1,58 @@
+# Frontsmith
+
+Frontsmith is an open-source Codex-native front-office kit for local service businesses.
+
+Primary use:
+
+Set up and operate a local service business digital front office from Codex: Owner Brief, Customer Desk, estimates, proposals, website updates, launch checks, activity records, and approval-gated connected actions.
+
+Frontsmith stands on its own business value. It does not require Neura to be useful.
+
+## Primary URLs
+
+- Frontsmith Control Panel: https://frontsmith.neurapath.ai/
+- Included website preview: https://frontsmith.neurapath.ai/website
+- Sitemap: https://frontsmith.neurapath.ai/sitemap.xml
+- Robots: https://frontsmith.neurapath.ai/robots.txt
+- Public repo: https://github.com/neurarelay/frontsmith
+
+## Evaluation Path
+
+```bash
+git clone https://github.com/neurarelay/frontsmith.git
+cd frontsmith
+npm ci
+npm run first-run:status
+npm run owner:brief
+npm run prepare:connected-action -- --action-type "email" --title "Send consultation follow-up" --target "Customer follow-up" --evidence "Owner-provided customer notes"
+```
+
+## Neura Boundary
+
+When connected client mode is enabled, Frontsmith can prepare proposed connected actions for Neura Relay preflight before any adapter runs:
+
+Frontsmith action -> Neura Registry identity -> Neura Relay preflight -> owner approval when required -> execution adapter -> local activity record
+
+Neura Relay returns Decision Receipt refs before developer-owned execution. Frontsmith does not send messages, publish changes, connect accounts, submit provider actions, or execute customer-facing actions without explicit owner approval.
+
+## Related Neura Surfaces
+
+- Neura Relay: https://www.neurarelay.com/
+- Relay first proof: https://www.neurarelay.com/developers/first-proof
+- Relay llms.txt: https://www.neurarelay.com/llms.txt
+- Relay Agent Card: https://www.neurarelay.com/.well-known/agent-card.json
+- NeuraPath route: https://neurapath.ai/frontsmith
+
+## Claim Boundaries
+
+Frontsmith does not claim:
+
+- that Neura executes downstream actions;
+- that Frontsmith depends on Neura to function;
+- public production API-key issuance;
+- public production MCP or A2A token issuance;
+- provider approval, endorsement, listing, integration, or partnership.
+
+## Canonical Summary
+
+Frontsmith helps a local service business run the digital front office from Codex. Its connected-action workflow is the applied proof case for why consequential agent actions need approval and traceable authority before execution.

@@ -26,6 +26,12 @@ Included Acme website:
 
 ![Acme sample website](docs/assets/frontsmith-acme-website.png)
 
+AI-readable discovery:
+
+- Hosted summary: `https://frontsmith.neurapath.ai/llms.txt`
+- NeuraPath route: `https://neurapath.ai/frontsmith`
+- Relay first proof: `https://www.neurarelay.com/developers/first-proof`
+
 ## Product Shape
 
 ```text
