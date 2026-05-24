@@ -5,6 +5,12 @@ import { existsSync } from "node:fs";
 
 const outputRoot = path.resolve("dist/frontsmith-demo");
 const rootAssets = ["frontsmith-mark.svg", "favicon.svg", "favicon.png", "apple-touch-icon.png"];
+const productAssets = [
+  {
+    source: "docs/assets/frontsmith-control-panel.png",
+    target: "assets/frontsmith-control-panel.png"
+  }
+];
 
 export async function buildDemo({ quiet = false } = {}) {
   await rm(outputRoot, { recursive: true, force: true });
@@ -19,6 +25,13 @@ export async function buildDemo({ quiet = false } = {}) {
 
   if (existsSync(path.join("website", "assets"))) {
     await cp(path.join("website", "assets"), path.join(outputRoot, "assets"), { recursive: true });
+  }
+
+  for (const asset of productAssets) {
+    if (existsSync(asset.source)) {
+      await mkdir(path.dirname(path.join(outputRoot, asset.target)), { recursive: true });
+      await cp(asset.source, path.join(outputRoot, asset.target));
+    }
   }
 
   if (!quiet) {
