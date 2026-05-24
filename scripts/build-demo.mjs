@@ -4,6 +4,10 @@ import { pathToFileURL } from "node:url";
 import { existsSync } from "node:fs";
 
 const outputRoot = path.resolve("dist/frontsmith-demo");
+const vercelAnalyticsSnippet = `    <script>
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>`;
 const rootAssets = ["frontsmith-mark.svg", "favicon.svg", "favicon.png", "apple-touch-icon.png"];
 const productAssets = [
   {
@@ -18,6 +22,8 @@ export async function buildDemo({ quiet = false } = {}) {
   await cp("demo", outputRoot, { recursive: true });
   await cp("website", path.join(outputRoot, "website"), { recursive: true });
   await rewriteWebsitePreviewAssets();
+  await injectVercelAnalytics(path.join(outputRoot, "index.html"));
+  await injectVercelAnalytics(path.join(outputRoot, "website", "index.html"));
 
   for (const asset of rootAssets) {
     await cp(path.join("website", asset), path.join(outputRoot, asset));
@@ -55,6 +61,16 @@ async function rewriteWebsitePreviewAssets() {
     );
 
   await writeFile(previewIndex, rewritten);
+}
+
+async function injectVercelAnalytics(filePath) {
+  const html = await readFile(filePath, "utf8");
+
+  if (html.includes("/_vercel/insights/script.js")) {
+    return;
+  }
+
+  await writeFile(filePath, html.replace("</head>", `${vercelAnalyticsSnippet}\n  </head>`));
 }
 
 if (import.meta.url === pathToFileURL(process.argv[1]).href) {

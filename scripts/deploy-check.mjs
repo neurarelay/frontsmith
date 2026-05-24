@@ -160,6 +160,7 @@ async function checkWebsiteMarkup() {
   requireScript(script, "validateIntakeForm", "Contact form client validation is present");
 
   await checkBuiltWebsitePreviewAssets();
+  await checkBuiltAnalyticsInstrumentation();
   await checkRootAssetReferences(demoHtml);
   await checkRootAssetReferences(html);
   await checkImageReferences(demoHtml);
@@ -193,6 +194,25 @@ async function checkBuiltWebsitePreviewAssets() {
     block("Built website preview must not load root demo assets through relative paths");
   } else {
     pass("Built website preview avoids clean-URL relative asset leakage");
+  }
+}
+
+async function checkBuiltAnalyticsInstrumentation() {
+  const analyticsScript = 'src="/_vercel/insights/script.js"';
+  const analyticsQueue = "window.va = window.va || function";
+
+  for (const file of ["index.html", "website/index.html"]) {
+    let html;
+
+    try {
+      html = await readFile(path.join(outputRoot, file), "utf8");
+    } catch (error) {
+      block(`Could not read built analytics target: ${error.message}`);
+      continue;
+    }
+
+    requireHtml(html, analyticsQueue, `Built ${file} initializes Vercel analytics queue`);
+    requireHtml(html, analyticsScript, `Built ${file} loads Vercel analytics script`);
   }
 }
 
