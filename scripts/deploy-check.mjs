@@ -8,7 +8,7 @@ const review = [];
 const demoRoot = "demo";
 const websiteRoot = "website";
 const outputRoot = "dist/frontsmith-demo";
-const requiredDemoFiles = ["index.html", "styles.css", "script.js"];
+const requiredDemoFiles = ["index.html", "styles.css", "script.js", "robots.txt", "sitemap.xml"];
 const requiredWebsiteFiles = [
   "index.html",
   "styles.css",
@@ -50,7 +50,7 @@ async function checkWebsiteFiles() {
     }
   }
 
-  for (const file of ["index.html", "styles.css", "script.js", "frontsmith-mark.svg", "favicon.svg", "favicon.png", "apple-touch-icon.png", "website/index.html", "website/styles.css", "website/script.js"]) {
+  for (const file of ["index.html", "styles.css", "script.js", "robots.txt", "sitemap.xml", "frontsmith-mark.svg", "favicon.svg", "favicon.png", "apple-touch-icon.png", "website/index.html", "website/styles.css", "website/script.js"]) {
     const fullPath = path.join(outputRoot, file);
     if (await exists(fullPath)) {
       pass(`Demo build asset present: ${fullPath}`);
@@ -178,6 +178,16 @@ async function checkBuiltWebsitePreviewAssets() {
 
   requireHtml(builtWebsiteHtml, 'href="/website/styles.css"', "Built website preview loads scoped stylesheet");
   requireHtml(builtWebsiteHtml, 'src="/website/script.js"', "Built website preview loads scoped script");
+  requireHtml(
+    builtWebsiteHtml,
+    'href="https://frontsmith.neurapath.ai/website"',
+    "Built website preview uses Frontsmith preview canonical"
+  );
+  requireHtml(
+    builtWebsiteHtml,
+    'content="https://frontsmith.neurapath.ai/website"',
+    "Built website preview uses Frontsmith preview Open Graph URL"
+  );
 
   if (builtWebsiteHtml.includes('href="./styles.css"') || builtWebsiteHtml.includes('src="./script.js"')) {
     block("Built website preview must not load root demo assets through relative paths");

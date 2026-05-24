@@ -46,7 +46,13 @@ async function rewriteWebsitePreviewAssets() {
   const html = await readFile(previewIndex, "utf8");
   const rewritten = html
     .replace('href="./styles.css"', 'href="/website/styles.css"')
-    .replace('src="./script.js"', 'src="/website/script.js"');
+    .replace('src="./script.js"', 'src="/website/script.js"')
+    .replace('href="https://acme.com"', 'href="https://frontsmith.neurapath.ai/website"')
+    .replace('content="https://acme.com"', 'content="https://frontsmith.neurapath.ai/website"')
+    .replaceAll(
+      'content="https://acme.com/assets/acme-hero-remodel.jpg"',
+      'content="https://frontsmith.neurapath.ai/assets/acme-hero-remodel.jpg"'
+    );
 
   await writeFile(previewIndex, rewritten);
 }
