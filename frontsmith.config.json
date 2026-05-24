@@ -1,0 +1,33 @@
+{
+  "product": "Frontsmith",
+  "version": "1.0.0",
+  "defaultBlueprint": "local-service",
+  "defaultWorkspace": ".frontsmith/business",
+  "primaryInterface": "codex",
+  "deployableOutput": "website",
+  "defaultCapabilities": [
+    "business-setup",
+    "owner-brief",
+    "website",
+    "customer-desk",
+    "ongoing-customer-communication",
+    "estimates-proposals",
+    "launch-plan",
+    "activity-log",
+    "settings-integrations",
+    "extension-planning"
+  ],
+  "extensionCandidates": [
+    "reviews-proof",
+    "marketing",
+    "social-posting",
+    "payments",
+    "invoices",
+    "accounting"
+  ],
+  "safety": {
+    "liveActionsDefault": "disabled",
+    "ownerApprovalRequired": true,
+    "neuraConnectedMode": "optional"
+  }
+}

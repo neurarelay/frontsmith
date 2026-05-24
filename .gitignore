@@ -1,0 +1,12 @@
+.DS_Store
+node_modules/
+.frontsmith/
+.env
+.env.*
+!.env.example
+dist/
+coverage/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.vercel

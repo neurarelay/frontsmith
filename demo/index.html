@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Frontsmith | Acme Control Panel</title>
+    <meta name="description" content="A Frontsmith Acme business showing ongoing Customer Desk operations, Owner Brief, estimates, website updates, and approval-gated actions" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#f7f6f0" />
+    <link rel="canonical" href="https://frontsmith.neurapath.ai" />
+    <meta property="og:site_name" content="Frontsmith" />
+    <meta property="og:title" content="Frontsmith | Acme Control Panel" />
+    <meta property="og:description" content="See the Acme local-service business Control Panel for customer communication, estimates, website updates, and your approval" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://frontsmith.neurapath.ai" />
+    <meta property="og:image" content="https://frontsmith.neurapath.ai/assets/acme-hero-remodel.jpg" />
+    <meta property="og:image:alt" content="Frontsmith remodeling front office preview" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Frontsmith | Acme Control Panel" />
+    <meta name="twitter:description" content="A sample Frontsmith Control Panel for ongoing local-service front-office operations" />
+    <meta name="twitter:image" content="https://frontsmith.neurapath.ai/assets/acme-hero-remodel.jpg" />
+    <meta name="twitter:image:alt" content="Frontsmith remodeling front office preview" />
+    <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.png" sizes="64x64" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <div class="site-header-inner">
+        <a class="brand-mark" href="#top" aria-label="Go to top">
+          <img class="brand-logo" src="/frontsmith-mark.svg" alt="" />
+          <span class="brand-wordmark">
+            <strong>Frontsmith</strong>
+            <small>Control Panel</small>
+          </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation" data-nav-toggle>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="site-nav" id="site-nav" data-nav aria-label="Primary navigation">
+          <div class="drawer-head">
+            <a class="brand-mark" href="#top" aria-label="Go to top">
+              <img class="brand-logo" src="/frontsmith-mark.svg" alt="" />
+              <span class="brand-wordmark">
+                <strong>Frontsmith</strong>
+                <small>Control Panel</small>
+              </span>
+            </a>
+            <button class="drawer-close" type="button" aria-label="Close navigation" data-nav-close>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+          <div class="drawer-body">
+            <section class="drawer-group" aria-labelledby="drawer-demo-label">
+              <p id="drawer-demo-label">Control Panel</p>
+              <div class="drawer-links">
+                <a class="drawer-link" href="#brief">
+                  <span class="drawer-link-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                      <path d="M8 9h8"></path>
+                      <path d="M8 13h5"></path>
+                    </svg>
+                  </span>
+                  Brief
+                </a>
+                <a class="drawer-link" href="#desk">
+                  <span class="drawer-link-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"></path>
+                      <path d="M8 9h8"></path>
+                      <path d="M8 13h5"></path>
+                    </svg>
+                  </span>
+                  Desk
+                </a>
+                <a class="drawer-link" href="#estimates">
+                  <span class="drawer-link-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M4 5h16"></path>
+                      <path d="M4 12h16"></path>
+                      <path d="M4 19h10"></path>
+                      <path d="m15 18 2 2 4-4"></path>
+                    </svg>
+                  </span>
+                  Estimates
+                </a>
+                <a class="drawer-link" href="#website">
+                  <span class="drawer-link-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <rect x="3" y="5" width="18" height="12" rx="2"></rect>
+                      <path d="M8 21h8"></path>
+                      <path d="M12 17v4"></path>
+                    </svg>
+                  </span>
+                  Website
+                </a>
+                <a class="drawer-link" href="#extend">
+                  <span class="drawer-link-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="m12 3 8 4.5-8 4.5-8-4.5Z"></path>
+                      <path d="m4 12 8 4.5 8-4.5"></path>
+                      <path d="m4 16.5 8 4.5 8-4.5"></path>
+                    </svg>
+                  </span>
+                  Extend
+                </a>
+              </div>
+            </section>
+            <div class="drawer-cta">
+              <a class="button primary" href="#start">Start</a>
+            </div>
+          </div>
+        </nav>
+        <a class="header-button" href="#start">Start</a>
+      </div>
+      <button class="nav-backdrop" type="button" aria-label="Close navigation" data-nav-backdrop></button>
+    </header>
+    <div class="header-spacer" aria-hidden="true"></div>
+
+    <main id="top">
+      <section class="hero section-green" aria-labelledby="hero-title">
+        <div class="page-container hero-grid">
+          <div class="hero-copy">
+            <h1 id="hero-title">Acme</h1>
+            <p class="hero-subhead">Set up, run, and extend your front&nbsp;office in Codex</p>
+            <p class="hero-body hero-body-lines"><span>Start with the included website, customize it for the business, and keep it current from day one.</span><span>Use Codex for customer communication, follow-ups, estimates, proposals, and site updates.</span><span>Extend it with tools, skills, plugins, workflows, and approval-gated connected actions.</span></p>
+            <div class="hero-actions">
+              <a class="button primary" href="#start">Start</a>
+              <a class="button secondary" href="/website" target="_blank" rel="noopener noreferrer">Acme website</a>
+            </div>
+          </div>
+
+          <div class="control-panel" aria-label="What Frontsmith runs">
+            <div class="panel-top">
+              <strong>What Frontsmith Runs</strong>
+            </div>
+            <div class="panel-list">
+              <a href="#start"><span class="status"></span><div><strong>Start</strong><p>Open the kit and begin in Codex</p></div></a>
+              <a href="#brief"><span class="status"></span><div><strong>Owner Brief</strong><p>See what changed and what needs review</p></div></a>
+              <a href="#desk"><span class="status"></span><div><strong>Customer Desk</strong><p>Manage inquiries, replies, and follow-ups</p></div></a>
+              <a href="#estimates"><span class="status"></span><div><strong>Estimates</strong><p>Draft estimates, proposals, and handoff notes</p></div></a>
+              <a href="#website"><span class="status"></span><div><strong>Website</strong><p>Build, customize, and maintain the site</p></div></a>
+              <a href="#extend"><span class="status"></span><div><strong>Extend</strong><p>Add tools, skills, plugins, and integrations</p></div></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="brief" class="page-section section-white workflow-section" aria-labelledby="brief-title">
+        <div class="workflow-layout">
+          <div class="workflow-copy">
+            <h2 id="brief-title">Owner Brief</h2>
+            <p class="section-subhead">What needs your attention today</p>
+            <p class="section-body section-body-lines"><span>See what changed since the last run.</span><span>Review what is waiting across the front office.</span><span>Approve the next actions before anything goes live.</span></p>
+          </div>
+          <div class="codex-window" aria-label="Owner Brief Codex workflow preview">
+            <div class="codex-bar">
+              <span></span>
+              <strong>Codex workspace preview</strong>
+            </div>
+            <div class="codex-body">
+              <div class="prompt-row"><p>Run today's Owner Brief for Acme</p></div>
+              <article class="response-card">
+                <div class="response-status"><span>Worked for 6s</span><span aria-hidden="true">&gt;</span></div>
+                <div class="response-divider" aria-hidden="true"></div>
+                <div class="markdown-preview">
+                  <h3>Executive Summary</h3>
+                  <p>Acme is ready for your review: the website is ready, 1 customer reply draft is waiting, 1 estimate draft is waiting, launch status is current, and nothing has been sent or published.</p>
+                  <h3>Current State</h3>
+                  <table class="codex-table">
+                    <thead>
+                      <tr>
+                        <th>Area</th>
+                        <th>State</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Website</td>
+                        <td>Ready for review</td>
+                      </tr>
+                      <tr>
+                        <td>Customer Desk</td>
+                        <td>1 reply draft waiting</td>
+                      </tr>
+                      <tr>
+                        <td>Estimate</td>
+                        <td>1 preparation draft waiting</td>
+                      </tr>
+                      <tr>
+                        <td>Live actions</td>
+                        <td>Need your approval first</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <h3>Review Checklist</h3>
+                  <ul class="codex-checklist">
+                    <li><span class="codex-check checked" aria-hidden="true"></span>Website update ready</li>
+                    <li><span class="codex-check" aria-hidden="true"></span>Review the customer reply draft</li>
+                    <li><span class="codex-check" aria-hidden="true"></span>Confirm contact details before deployment</li>
+                  </ul>
+                  <h3>Needs Approval</h3>
+                  <ul>
+                    <li>Approve reply before sending</li>
+                    <li>Approve estimate assumptions before proposal use</li>
+                    <li>Approve setup before any live sends or publishing</li>
+                  </ul>
+                  <p>Files updated:</p>
+                  <div class="artifact-rail compact" aria-label="Owner Brief file chips">
+                    <span>owner-brief.md</span>
+                    <span>kitchen-remodeling-reply-draft.md</span>
+                    <span>kitchen-remodeling-estimate-draft.md</span>
+                  </div>
+                  <div class="codex-file-stack" aria-label="Owner Brief file cards">
+                    <div class="codex-file-card">
+                      <span class="codex-file-icon" aria-hidden="true"></span>
+                      <div>
+                        <strong>owner-brief.md</strong>
+                        <span>Document · MD</span>
+                      </div>
+                      <span class="codex-file-action">Open in</span>
+                    </div>
+                    <div class="codex-change-card">
+                      <div class="codex-change-main">
+                        <span class="codex-file-icon edit" aria-hidden="true"></span>
+                        <div>
+                          <strong>Edited owner-brief.md</strong>
+                          <span><b>+24</b> <i>-0</i></span>
+                        </div>
+                        <span class="codex-file-action">Review</span>
+                      </div>
+                      <div class="codex-details-row">Details <span aria-hidden="true"></span></div>
+                    </div>
+                  </div>
+                  <p class="approval-strip">Local only. Nothing sent, published, connected, or deployed.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="desk" class="page-section section-green workflow-section" aria-labelledby="desk-title">
+        <div class="workflow-layout reverse">
+          <div class="workflow-copy">
+            <h2 id="desk-title">Customer Desk</h2>
+            <p class="section-subhead">Reply faster with approval</p>
+            <p class="section-body section-body-lines"><span>Turn each inquiry into a clear reply draft.</span><span>Track what the customer owes you next.</span><span>Approve the final message before it is sent.</span></p>
+          </div>
+          <div class="codex-window" aria-label="Customer Desk Codex workflow preview">
+            <div class="codex-bar">
+              <span></span>
+              <strong>Customer Desk reply draft</strong>
+            </div>
+            <div class="codex-body">
+              <div class="prompt-row"><p>Draft Jamie's kitchen reply and show approvals</p></div>
+              <article class="response-card">
+                <div class="response-status"><span>Worked for 9s</span><span aria-hidden="true">&gt;</span></div>
+                <div class="response-divider" aria-hidden="true"></div>
+                <div class="markdown-preview">
+                  <h3>Customer Context</h3>
+                  <ul>
+                    <li>Jamie wants a better layout, new cabinets, and clearer next steps</li>
+                    <li>Reply asks for photos, affected rooms, timing goals, and must-have outcomes</li>
+                  </ul>
+                  <h3>Follow-Up Tracking</h3>
+                  <p>Next step: customer sends added context or you approve a consultation path.</p>
+                  <h3>Needs Your Review</h3>
+                  <ul>
+                    <li>Confirm the project type and incoming notes</li>
+                    <li>Add approved scheduling details</li>
+                    <li>Approve final message before sending</li>
+                  </ul>
+                  <div class="artifact-rail compact" aria-label="Customer Desk file chips">
+                    <span>kitchen-remodeling-reply-draft.md</span>
+                    <span>activity-log.md</span>
+                  </div>
+                  <div class="codex-file-card">
+                    <span class="codex-file-icon" aria-hidden="true"></span>
+                    <div>
+                      <strong>kitchen-remodeling-reply-draft.md</strong>
+                      <span>Draft reply · MD</span>
+                    </div>
+                    <span class="codex-file-action">Open in</span>
+                  </div>
+                  <p class="approval-strip">Draft only. Gmail, Drive, and Calendar handoffs require your approval.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="estimates" class="page-section section-white workflow-section" aria-labelledby="estimates-title">
+        <div class="workflow-layout">
+          <div class="workflow-copy">
+            <h2 id="estimates-title">Estimates</h2>
+            <p class="section-subhead">Know the scope before pricing</p>
+            <p class="section-body section-body-lines"><span>Turn a rough request into a clear estimate path.</span><span>See what is known, missing, and not ready to price.</span><span>Approve assumptions before a proposal goes out.</span></p>
+          </div>
+          <div class="codex-window" aria-label="Estimate Codex workflow preview">
+            <div class="codex-bar">
+              <span></span>
+              <strong>Estimate preparation draft</strong>
+            </div>
+            <div class="codex-body">
+              <div class="prompt-row"><p>Draft an estimate path for Jamie's kitchen project</p></div>
+              <article class="response-card">
+                <div class="response-status"><span>Worked for 12s</span><span aria-hidden="true">&gt;</span></div>
+                <div class="response-divider" aria-hidden="true"></div>
+                <div class="markdown-preview">
+                  <h3>Estimate Prep Table</h3>
+                  <table class="codex-table">
+                    <thead>
+                      <tr>
+                        <th>Item</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Cabinet replacement</td>
+                        <td>Scope captured</td>
+                      </tr>
+                      <tr>
+                        <td>Counter update</td>
+                        <td>Scope captured</td>
+                      </tr>
+                      <tr>
+                        <td>Photos or site visit notes</td>
+                        <td>Missing before pricing</td>
+                      </tr>
+                      <tr>
+                        <td>Budget comfort range</td>
+                        <td>Missing before pricing</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <h3>Pricing Rules</h3>
+                  <p>Not provided yet. Do not add a price, range, deposit, or schedule commitment until you approve.</p>
+                  <div class="artifact-rail compact" aria-label="Estimate file chips">
+                    <span>kitchen-remodeling-estimate-draft.md</span>
+                    <span>kitchen-remodeling-reply-draft.md</span>
+                  </div>
+                  <p class="approval-strip">Preparation only. Final estimate delivery requires pricing rules approved by you.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="website" class="page-section section-green workflow-section" aria-labelledby="website-title">
+        <div class="website-workflow-layout">
+          <div class="workflow-copy">
+            <h2 id="website-title">Website</h2>
+            <p class="section-subhead">Keep the public site current</p>
+            <p class="section-body section-body-lines"><span>Keep the included Acme site current with services, proof, offers, and contact paths.</span><span>Preview every website change in Codex before anything is published for customers to see.</span></p>
+            <div class="codex-window inline-codex" aria-label="Website Codex workflow preview">
+              <div class="codex-bar">
+                <span></span>
+                <strong>Website update preview</strong>
+              </div>
+              <div class="codex-body">
+                <div class="prompt-row"><p>Update Acme's website and show what changed</p></div>
+                <article class="response-card">
+                  <div class="response-status"><span>Worked for 15s</span><span aria-hidden="true">&gt;</span></div>
+                  <div class="response-divider" aria-hidden="true"></div>
+                  <div class="markdown-preview">
+                    <h3>Website Update</h3>
+                    <p>The site copy was updated from the business profile. Deployment is still blocked until approval.</p>
+                    <table class="codex-table">
+                      <thead>
+                        <tr>
+                          <th>File</th>
+                          <th>Change</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>website/index.html</td>
+                          <td>Updated services and proof</td>
+                        </tr>
+                        <tr>
+                          <td>website-review.md</td>
+                          <td>Wrote review notes</td>
+                        </tr>
+                        <tr>
+                          <td>latest-website-update.md</td>
+                          <td>Logged activity</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="artifact-rail compact" aria-label="Website file chips">
+                      <span>website/index.html</span>
+                      <span>website-review.md</span>
+                      <span>latest-website-update.md</span>
+                    </div>
+                    <div class="codex-change-card">
+                      <div class="codex-change-main">
+                        <span class="codex-file-icon edit" aria-hidden="true"></span>
+                        <div>
+                          <strong>Edited website/index.html</strong>
+                          <span><b>+18</b> <i>-3</i></span>
+                        </div>
+                        <span class="codex-file-action">Review</span>
+                      </div>
+                      <div class="codex-details-row">Details <span aria-hidden="true"></span></div>
+                    </div>
+                    <p class="approval-strip">Preview only. Deployment remains blocked until your approval.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+          <div class="browser-frame website-preview-card" aria-label="Acme website preview">
+            <div class="browser-bar">
+              <span class="browser-dot"></span>
+              <span class="browser-dot"></span>
+              <span class="browser-dot"></span>
+              <span class="browser-url">acme.com</span>
+              <a class="browser-open" href="/website" target="_blank" rel="noopener noreferrer">Open</a>
+            </div>
+            <frontsmith-website-preview class="website-preview-embed" src="/website"></frontsmith-website-preview>
+          </div>
+        </div>
+      </section>
+
+      <section id="extend" class="page-section section-white workflow-section" aria-labelledby="extend-title">
+        <div class="workflow-layout reverse">
+          <div class="workflow-copy">
+            <h2 id="extend-title">Extend</h2>
+            <p class="section-subhead">Add capability without losing control</p>
+            <p class="section-body section-body-lines"><span>Add tools, skills, plugins, and connectors.</span><span>Keep every new workflow visible in Codex.</span><span>Approve live actions before they run.</span></p>
+          </div>
+          <div class="codex-window" aria-label="Extension Codex workflow preview">
+            <div class="codex-bar">
+              <span></span>
+              <strong>Extension plan</strong>
+            </div>
+            <div class="codex-body">
+              <div class="prompt-row"><p>Add a calendar workflow for approved consultation requests</p></div>
+              <article class="response-card">
+                <div class="response-status"><span>Worked for 12s</span><span aria-hidden="true">&gt;</span></div>
+                <div class="response-divider" aria-hidden="true"></div>
+                <div class="markdown-preview">
+                  <h3>Extension Boundary</h3>
+                  <table class="codex-table">
+                    <thead>
+                      <tr>
+                        <th>Layer</th>
+                        <th>Use</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Skill</td>
+                        <td>Consultation scheduling prep</td>
+                      </tr>
+                      <tr>
+                        <td>Workflow</td>
+                        <td>Approval checklist and activity record</td>
+                      </tr>
+                      <tr>
+                        <td>Connector</td>
+                        <td>Calendar and Gmail only after approval</td>
+                      </tr>
+                      <tr>
+                        <td>Approval check</td>
+                        <td>Runs before any live tool action</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="artifact-rail compact" aria-label="Extension file chips">
+                    <span>workflows/consultation-scheduling.md</span>
+                    <span>packages/adapters/calendar/</span>
+                    <span>.frontsmith/business/activity/</span>
+                  </div>
+                  <p class="approval-strip">No connector runs until you approve the exact action.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="start" class="page-section section-green" aria-labelledby="start-title">
+        <div class="start-panel">
+          <div>
+            <h2 id="start-title">Start</h2>
+            <p class="section-subhead">Launch the front office in Codex</p>
+            <p class="start-body-lines"><span>Open the GitHub repo in Codex, set up the included website, and start running</span><span>customer communication, estimates, updates, and approvals from one workspace</span></p>
+          </div>
+          <div class="start-actions">
+            <a class="button primary" href="https://github.com/neurarelay/frontsmith" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="button secondary" href="/website" target="_blank" rel="noopener noreferrer">Acme website</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>
+          <a class="footer-brand" href="#top" aria-label="Go to top">
+            <img class="footer-mark" src="/frontsmith-mark.svg" alt="" />
+            <h2>Frontsmith</h2>
+          </a>
+          <p>AI front office for local service businesses</p>
+        </div>
+        <div class="footer-links">
+          <div>
+            <h3>Control Panel</h3>
+            <ul>
+              <li><a href="#brief">Brief</a></li>
+              <li><a href="#desk">Desk</a></li>
+              <li><a href="#estimates">Estimates</a></li>
+              <li><a href="#website">Website</a></li>
+              <li><a href="#extend">Extend</a></li>
+              <li><a href="#start">Start</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Open</h3>
+            <ul>
+              <li><a href="https://github.com/neurarelay/frontsmith" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+              <li><a href="/website" target="_blank" rel="noopener noreferrer">Acme website</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Frontsmith</p>
+      </div>
+    </footer>
+
+    <script src="/script.js"></script>
+  </body>
+</html>

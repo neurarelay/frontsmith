@@ -1,0 +1,30 @@
+{
+  "id": "local-service",
+  "name": "Local Service Business",
+  "version": "1.0.0",
+  "description": "Default Frontsmith v1.0 blueprint for a local service business.",
+  "requiredProfileFields": [
+    "businessName",
+    "businessType",
+    "serviceAreas",
+    "services",
+    "phone",
+    "email",
+    "brandVoice"
+  ],
+  "defaultPages": [
+    "home"
+  ],
+  "capabilities": [
+    "business-setup",
+    "owner-brief",
+    "website",
+    "customer-desk",
+    "ongoing-customer-communication",
+    "estimates-proposals",
+    "launch-plan",
+    "activity-log",
+    "settings-integrations",
+    "extension-planning"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "name": "frontsmith",
+  "version": "1.0.0",
+  "description": "Codex-native front-office kit for local service businesses.",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neurarelay/frontsmith.git"
+  },
+  "homepage": "https://frontsmith.neurapath.ai/",
+  "bugs": {
+    "url": "https://github.com/neurarelay/frontsmith/issues"
+  },
+  "keywords": [
+    "codex",
+    "front-office",
+    "local-business",
+    "website",
+    "customer-desk",
+    "owner-approval"
+  ],
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "bootstrap": "node scripts/bootstrap.mjs",
+    "update:website": "node scripts/update-website.mjs",
+    "owner:brief": "node scripts/prepare-owner-brief.mjs",
+    "prepare:reply": "node scripts/prepare-customer-reply.mjs",
+    "prepare:estimate": "node scripts/prepare-estimate-draft.mjs",
+    "prepare:extension": "node scripts/prepare-extension-plan.mjs",
+    "launch:status": "node scripts/launch-status.mjs",
+    "build:demo": "node scripts/build-demo.mjs",
+    "deploy:check": "node scripts/build-demo.mjs --quiet && node scripts/deploy-check.mjs",
+    "preview:demo": "node scripts/preview-demo.mjs",
+    "preview:website": "node scripts/preview-website.mjs",
+    "test": "npm run test:launch && npm run test:regression",
+    "test:launch": "node tests/launch-readiness.mjs",
+    "test:regression": "node tests/regression.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
