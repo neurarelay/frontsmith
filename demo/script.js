@@ -782,6 +782,34 @@ function setupPanelMotion() {
   window.addEventListener("resize", () => setProgress(current), { passive: true });
 }
 
+function setupWalkthroughVideo() {
+  document.querySelectorAll("[data-video-shell]").forEach((shell) => {
+    const video = shell.querySelector("[data-walkthrough-video]");
+    const playButton = shell.querySelector("[data-video-play]");
+
+    if (!(video instanceof HTMLVideoElement) || !(playButton instanceof HTMLButtonElement)) {
+      return;
+    }
+
+    playButton.addEventListener("click", async () => {
+      shell.classList.add("is-playing");
+      video.setAttribute("controls", "");
+
+      try {
+        await video.play();
+      } catch {
+        shell.classList.remove("is-playing");
+        video.removeAttribute("controls");
+      }
+    });
+
+    video.addEventListener("ended", () => {
+      shell.classList.remove("is-playing");
+      video.removeAttribute("controls");
+    });
+  });
+}
+
 function syncHeader() {
   header.classList.toggle("scrolled", getPageScrollTop() > 16);
 }
@@ -828,6 +856,7 @@ function scrollAfterNavClose(callback) {
 
 syncHeader();
 setupPanelMotion();
+setupWalkthroughVideo();
 getScrollRoot().addEventListener("scroll", syncHeader, { passive: true });
 
 toggle.addEventListener("click", () => {

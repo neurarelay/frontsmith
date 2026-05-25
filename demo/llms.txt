@@ -12,6 +12,8 @@ Frontsmith stands on its own business value. It does not require Neura to be use
 
 - Frontsmith Control Panel: https://frontsmith.neurapath.ai/
 - Included website preview: https://frontsmith.neurapath.ai/website
+- Codex workflow walkthrough video: https://frontsmith.neurapath.ai/#walkthrough
+- YouTube walkthrough: https://youtu.be/4B4Gal-I-I0
 - Sitemap: https://frontsmith.neurapath.ai/sitemap.xml
 - Robots: https://frontsmith.neurapath.ai/robots.txt
 - Public repo: https://github.com/neurarelay/frontsmith

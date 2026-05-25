@@ -68,3 +68,12 @@ Every deliverable carrying the Frontsmith name must be:
 - useful before Neura enrollment;
 - governed by Neura when connected client mode is enabled;
 - scoped tightly enough for an operator to execute without operational sprawl.
+
+## Public Layout Rule
+
+Public headings, subheadings, video captions, and section intros must be edited to fit cleanly in their containers.
+
+- Avoid awkward two-line wraps, orphan words, and clipped text.
+- Do not end titles, headings, subheadings, or video-caption lines with periods.
+- If copy wraps badly, shorten the copy first; then adjust responsive sizing or layout.
+- When matching an existing pattern from another Neura/Frontsmith surface, match the typography, spacing, icon treatment, and responsive behavior instead of improvising adjacent styling.

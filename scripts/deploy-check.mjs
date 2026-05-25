@@ -144,7 +144,7 @@ async function checkWebsiteMarkup() {
   requireHtml(demoHtml, 'href="/favicon.png"', "Demo PNG favicon fallback is declared");
   requireHtml(demoHtml, 'href="/apple-touch-icon.png"', "Demo Apple touch icon is declared");
   requireHtml(demoHtml, 'href="/website"', "Demo links to the sample website preview");
-  requireText(demoHtml, "Set up, run, and extend your front office in Codex", "Demo explains the Frontsmith control panel");
+requireText(demoHtml, "Set up your front office in Codex", "Demo explains the Frontsmith control panel");
   requireHtml(demoHtml, "What Frontsmith Runs", "Demo opens with the front-office module list");
   requireHtml(demoHtml, "Customer Desk", "Demo opens with ongoing customer work");
   requireHtml(demoHtml, "https://github.com/neurarelay/frontsmith", "Demo includes the GitHub setup path");

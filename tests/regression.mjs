@@ -313,7 +313,7 @@ try {
   await assertExists(path.join("dist", "frontsmith-demo", "website", "index.html"));
 
   const demoHomepage = await readFile(path.join("dist", "frontsmith-demo", "index.html"), "utf8");
-  assertTextIncludes(demoHomepage, "Set up, run, and extend your front office in Codex", "demo hero");
+  assertTextIncludes(demoHomepage, "Set up your front office in Codex", "demo hero");
   assertIncludes(demoHomepage, "What Frontsmith Runs", "demo module list");
   assertIncludes(demoHomepage, "Customer Desk", "demo customer desk");
   assertIncludes(demoHomepage, 'href="/website"', "demo website preview link");

@@ -21,6 +21,8 @@ function contentType(file) {
   if (file.endsWith(".jpg") || file.endsWith(".jpeg")) return "image/jpeg";
   if (file.endsWith(".webp")) return "image/webp";
   if (file.endsWith(".png")) return "image/png";
+  if (file.endsWith(".mp4")) return "video/mp4";
+  if (file.endsWith(".vtt")) return "text/vtt; charset=utf-8";
   if (file.endsWith(".svg")) return "image/svg+xml; charset=utf-8";
   return "application/octet-stream";
 }
