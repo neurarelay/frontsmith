@@ -22,6 +22,7 @@ Frontsmith stands on its own business value. It does not require Neura to be use
 git clone https://github.com/neurarelay/frontsmith.git
 cd frontsmith
 npm install
+npm run bootstrap -- --business-name "Acme"
 npm run first-run:status
 npm run owner:brief
 npm run prepare:connected-action -- --action-type "email" --title "Send consultation follow-up" --target "Customer follow-up" --evidence "Owner-provided customer notes"
