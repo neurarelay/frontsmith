@@ -108,6 +108,12 @@ The receipt must name the proposed action, target, evidence, approval gate, Neur
 
 Connected-action receipts must stay local-only. They must not connect providers, schedule appointments, send messages, publish, upload files, export data, or execute connected actions.
 
+## Relay Proof Map
+
+The practical Relay proof map lives at `docs/product/relay-proof-map.md`.
+
+It connects Frontsmith workflows to the authority-before-action question without claiming that Frontsmith runs Relay by default. Customer Desk replies, estimate preparation, website updates, launch status, extension planning, and connected-action receipts should remain owner-reviewed before any live action.
+
 ## Default Exclusions
 
 These are excluded from the v1.0 default surface:

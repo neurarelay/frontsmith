@@ -48,6 +48,7 @@ These commands must not send email, publish a website, change DNS, connect provi
 | Estimates and Proposals | Prepare scope, missing information, questions, and proposal outline | `npm run prepare:estimate` | `.frontsmith/business/estimates/*-estimate-draft.md` | `tests/regression.mjs` |
 | Website Update | Update the committed website from the business profile | `npm run update:website` | `website/index.html`, website review note, latest website update note | `tests/regression.mjs` |
 | Extension Planning | Plan a new tool, skill, connector, or workflow before live behavior | `npm run prepare:extension` | `.frontsmith/business/extensions/*-extension-plan.md` | `tests/regression.mjs` |
+| Relay Proof Map | Explain how Frontsmith workflows map to approval-before-action receipts | `docs/product/relay-proof-map.md` | Static proof map | `tests/launch-readiness.mjs` |
 | Launch Status | Summarize readiness and owner blockers | `npm run launch:status` | `.frontsmith/business/launch/launch-status.md` | `tests/regression.mjs` |
 | Website Preview | Serve the included website locally | `npm run preview:website` | Local HTTP preview of `website/` | `tests/regression.mjs` |
 | Contact Form Dry Run | Validate the deployed contact route without sending email | `CONTACT_DELIVERY_MODE=dry-run npm run preview:website` | `/api/contact` accepts valid dry-run submissions | `tests/regression.mjs` |

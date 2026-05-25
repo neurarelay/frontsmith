@@ -95,6 +95,8 @@ Connection and deployment steps stay approval-gated. Frontsmith prepares the pat
 
 The Codex workflow walkthrough proof is available at `docs/walkthroughs/codex-workflow-proof.md`. It shows the Owner Brief, Customer Desk reply draft, estimate preparation, website update/preview, extension planning, connected-action receipt, generated files, preview links, and approval boundaries.
 
+The Frontsmith Relay proof map is available at `docs/product/relay-proof-map.md`. It maps Customer Desk replies, estimates, website updates, launch status, extension planning, and connected-action receipts to the authority-before-action boundary that Neura Relay governs in connected client mode.
+
 For proposed live actions, Frontsmith can prepare a dry-run connected-action receipt before any adapter runs:
 
 ```bash

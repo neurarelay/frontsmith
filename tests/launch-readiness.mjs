@@ -10,6 +10,7 @@ const architecture = await readFile("docs/product/architecture.md", "utf8");
 const launchScenarios = await readFile("docs/product/launch-scenarios.md", "utf8");
 const extensionGuide = await readFile("docs/developer/extension-guide.md", "utf8");
 const codexWorkflowProof = await readFile("docs/walkthroughs/codex-workflow-proof.md", "utf8");
+const relayProofMap = await readFile("docs/product/relay-proof-map.md", "utf8");
 
 const requiredCapabilities = [
   "business-setup",
@@ -51,6 +52,7 @@ const requiredFiles = [
   "workflows/prepare-extension-plan.md",
   "workflows/prepare-connected-action.md",
   "docs/product/launch-scenarios.md",
+  "docs/product/relay-proof-map.md",
   "docs/walkthroughs/codex-workflow-proof.md",
   "docs/developer/extension-guide.md",
   "tests/regression.mjs",
@@ -65,6 +67,7 @@ const requiredScenarioLabels = [
   "Estimates and Proposals",
   "Website Update",
   "Extension Planning",
+  "Relay Proof Map",
   "Launch Status",
   "Website Preview",
   "Contact Form Dry Run",
@@ -119,6 +122,7 @@ for (const command of [
 assertIncludes(readme, "docs/assets/frontsmith-control-panel.png", "README Control Panel screenshot");
 assertIncludes(readme, "docs/assets/frontsmith-acme-website.png", "README Acme website screenshot");
 assertIncludes(readme, "docs/walkthroughs/codex-workflow-proof.md", "README walkthrough proof");
+assertIncludes(readme, "docs/product/relay-proof-map.md", "README Relay proof map");
 
 for (const doc of [
   ["README", readme],
@@ -135,6 +139,7 @@ assertIncludes(operatorGuide, "Prepare an extension plan", "operator extension p
 assertIncludes(operatorGuide, "first-run-readiness.md", "operator first-run readiness output");
 assertIncludes(packageSpec, "Extension Requirement", "package extension requirement");
 assertIncludes(packageSpec, "Connected-Action Receipt Requirement", "package connected-action receipt requirement");
+assertIncludes(packageSpec, "docs/product/relay-proof-map.md", "package Relay proof map");
 assertIncludes(architecture, ".frontsmith/business/extensions/", "architecture extension folder");
 assertIncludes(extensionGuide, "Extension Planning Workflow", "developer extension workflow");
 assertIncludes(extensionGuide, "Connected-Action Receipt Workflow", "developer connected-action workflow");
@@ -151,6 +156,18 @@ for (const section of [
 }
 assertIncludes(codexWorkflowProof, "Generated files", "walkthrough generated files");
 assertIncludes(codexWorkflowProof, "Approval boundary", "walkthrough approval boundary");
+for (const phrase of [
+  "Can the workflow prove authority before the action executes?",
+  "Customer Desk reply",
+  "Estimate preparation",
+  "Website update",
+  "Connected-action receipt",
+  "Neura Relay Action Card reference placeholder",
+  "Frontsmith does not execute downstream actions by default"
+]) {
+  assertIncludes(relayProofMap, phrase, `Relay proof map ${phrase}`);
+}
+assertSafetyBoundary(relayProofMap, "Relay proof map");
 
 console.log("Frontsmith launch-readiness contract passed.");
 
