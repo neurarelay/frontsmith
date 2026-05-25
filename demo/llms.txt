@@ -39,7 +39,7 @@ Neura Relay returns Decision Receipt refs before developer-owned execution. Fron
 ## Related Neura Surfaces
 
 - Neura Relay: https://www.neurarelay.com/
-- Relay first proof: https://www.neurarelay.com/developers/first-proof
+- Relay first proof: https://www.neurarelay.com/developers/first-proof?neura_source=frontsmith&neura_campaign=frontsmith_applied_proof&neura_surface=demo_llms_txt
 - Relay llms.txt: https://www.neurarelay.com/llms.txt
 - Relay Agent Card: https://www.neurarelay.com/.well-known/agent-card.json
 - NeuraPath route: https://neurapath.ai/frontsmith

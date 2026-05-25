@@ -30,7 +30,7 @@ AI-readable discovery:
 
 - Hosted summary: `https://frontsmith.neurapath.ai/llms.txt`
 - NeuraPath route: `https://neurapath.ai/frontsmith`
-- Relay first proof: `https://www.neurarelay.com/developers/first-proof`
+- Relay first proof: `https://www.neurarelay.com/developers/first-proof?neura_source=frontsmith&neura_campaign=frontsmith_applied_proof&neura_surface=readme`
 
 ## Product Shape
 
