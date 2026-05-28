@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased
+
+### Added
+
+- Activation sprint guide for developers, agencies, and operators.
+- First-run feedback and agency/operator feedback issue templates.
+- README activation path that routes visitors from discovery into a public feedback loop.
+
 ## v1.0.0 - 2026-05-24
 
 Initial public release of Frontsmith.
@@ -28,4 +36,3 @@ npm test
 ```
 
 The release was also verified from a fresh public clone.
-

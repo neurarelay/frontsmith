@@ -1,0 +1,62 @@
+name: First-run feedback
+description: Share what happened when you cloned and tried Frontsmith
+title: "[First run]: "
+labels: ["feedback", "activation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for trying Frontsmith. Do not include credentials, private customer data, API keys, provider account details, or real business records.
+  - type: textarea
+    id: goal
+    attributes:
+      label: What were you trying to do?
+      description: Tell us whether you were testing as a developer, agency, or operator.
+      placeholder: I wanted to see whether Frontsmith could...
+    validations:
+      required: true
+  - type: textarea
+    id: commands
+    attributes:
+      label: Commands you ran
+      description: Paste the commands you tried.
+      render: shell
+      placeholder: |
+        npm install
+        npm run check
+        npm run bootstrap -- --business-name "Acme" --website-url "https://acme.com"
+        npm run first-run:status
+        npm run owner:brief
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: What happened?
+      description: Include the result, error, confusing step, or useful output.
+    validations:
+      required: true
+  - type: textarea
+    id: useful
+    attributes:
+      label: What felt useful?
+      description: Name any part of the setup, Owner Brief, Customer Desk, estimate flow, website update, or approval boundary that made sense.
+  - type: textarea
+    id: improvement
+    attributes:
+      label: One improvement that would make adoption easier
+      description: Keep it narrow and practical.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: "macOS 15, Node 24, Codex desktop"
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: I removed credentials, customer data, and private business records from this issue
+          required: true

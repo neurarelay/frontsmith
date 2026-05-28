@@ -6,6 +6,8 @@ Frontsmith is an open-source kit. The fastest support path is to open a focused 
 
 Use issues for:
 
+- first-run feedback from a fresh clone;
+- agency or operator adoption feedback;
 - setup problems;
 - workflow command failures;
 - documentation gaps;
@@ -33,4 +35,3 @@ If the issue is about the hosted Control Panel or website build, also run:
 ```bash
 npm run build:demo
 ```
-

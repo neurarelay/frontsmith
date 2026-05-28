@@ -41,6 +41,24 @@ npm run update:website
 npm run launch:status
 ```
 
+## Activation Feedback
+
+If you are not ready to open a code pull request, useful feedback still helps.
+
+Start with the activation guide:
+
+```text
+docs/community/activation-sprint.md
+```
+
+The most useful issues are:
+
+- first-run feedback from a fresh clone;
+- agency/operator feedback about a real local-service workflow;
+- a narrow product gap inside setup, Owner Brief, Customer Desk, estimates, website updates, launch readiness, extension planning, or approval-before-action.
+
+Good first contributions are usually documentation, workflow output clarity, test coverage, and approval-boundary improvements. Avoid broad SaaS, auth, billing, CRM, accounting, payment, or live integration work unless there is an issue that explicitly scopes it.
+
 ## Safety Rules
 
 Do not add behavior that silently sends emails, publishes websites, changes DNS, contacts customers, schedules calendar events, submits provider updates, or runs live connected actions.
@@ -66,4 +84,3 @@ CONTACT_DELIVERY_MODE=resend CONTACT_TO_EMAIL=projects@acme.com CONTACT_FROM_EMA
 ```
 
 That command validates configuration shape only. It must not send email or deploy.
-

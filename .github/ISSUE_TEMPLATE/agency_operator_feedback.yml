@@ -1,0 +1,56 @@
+name: Agency or operator feedback
+description: Tell us whether Frontsmith fits a real local-service business workflow
+title: "[Agency/operator feedback]: "
+labels: ["feedback", "agency", "operator"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for practical adoption feedback. Do not include credentials, private customer data, API keys, provider account details, or real business records.
+  - type: dropdown
+    id: role
+    attributes:
+      label: Perspective
+      options:
+        - Agency
+        - Developer
+        - Local service business operator
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: scenario
+    attributes:
+      label: Real-world scenario
+      description: Describe the kind of business or client workflow you are evaluating.
+      placeholder: A remodeling contractor needs help with website updates, replies, estimates, and launch checks.
+    validations:
+      required: true
+  - type: textarea
+    id: fit
+    attributes:
+      label: Where Frontsmith fits
+      description: Which part of the front-office loop looks useful?
+    validations:
+      required: true
+  - type: textarea
+    id: blocker
+    attributes:
+      label: Adoption blocker
+      description: What would stop you from using or recommending Frontsmith?
+    validations:
+      required: true
+  - type: textarea
+    id: next
+    attributes:
+      label: One change that would make this more useful
+      description: Keep it inside the v1.0 scope when possible.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: I removed credentials, customer data, and private business records from this issue
+          required: true

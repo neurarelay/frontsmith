@@ -33,6 +33,35 @@ AI-readable discovery:
 - NeuraPath route: `https://neurapath.ai/frontsmith`
 - Relay first proof: `https://www.neurarelay.com/developers/first-proof?neura_source=frontsmith&neura_campaign=frontsmith_applied_proof&neura_surface=readme`
 
+## Try Frontsmith
+
+Frontsmith is ready for developer, agency, and operator feedback.
+
+The fastest useful test is:
+
+```bash
+git clone https://github.com/neurarelay/frontsmith.git
+cd frontsmith
+npm install
+npm run check
+npm run bootstrap -- --business-name "Acme" --website-url "https://acme.com"
+npm run first-run:status
+npm run owner:brief
+npm run prepare:connected-action -- --action-type "email" --title "Send consultation follow-up" --target "Customer follow-up" --evidence "Owner-provided customer notes"
+```
+
+Then open a GitHub issue with what happened:
+
+- first-run feedback from a developer trying the repo;
+- agency/operator feedback about whether this would fit a real local-service client;
+- one narrow improvement that would make the kit easier to adopt.
+
+Start here:
+
+- [Activation sprint guide](docs/community/activation-sprint.md)
+- [Operator start guide](docs/operator/start-here.md)
+- [Contributing guide](CONTRIBUTING.md)
+
 ## Product Shape
 
 ```text
