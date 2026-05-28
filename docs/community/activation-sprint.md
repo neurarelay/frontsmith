@@ -42,6 +42,12 @@ Open a GitHub issue and include:
 
 Do not include live credentials, private customer data, API keys, provider account details, or real business records.
 
+Current feedback targets:
+
+- [Try Frontsmith and post your first-run result](https://github.com/neurarelay/frontsmith/issues/5)
+- [Agency feedback: would Frontsmith fit a client front-office setup?](https://github.com/neurarelay/frontsmith/issues/6)
+- [Good first issue: improve one workflow or docs path](https://github.com/neurarelay/frontsmith/issues/7)
+
 ## Contribution Lanes
 
 Good first contributions:

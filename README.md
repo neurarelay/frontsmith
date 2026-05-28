@@ -52,9 +52,9 @@ npm run prepare:connected-action -- --action-type "email" --title "Send consulta
 
 Then open a GitHub issue with what happened:
 
-- first-run feedback from a developer trying the repo;
-- agency/operator feedback about whether this would fit a real local-service client;
-- one narrow improvement that would make the kit easier to adopt.
+- [first-run feedback from a developer trying the repo](https://github.com/neurarelay/frontsmith/issues/5);
+- [agency/operator feedback about whether this would fit a real local-service client](https://github.com/neurarelay/frontsmith/issues/6);
+- [one narrow improvement that would make the kit easier to adopt](https://github.com/neurarelay/frontsmith/issues/7).
 
 Start here:
 
